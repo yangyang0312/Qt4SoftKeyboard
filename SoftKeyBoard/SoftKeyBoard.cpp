@@ -341,7 +341,7 @@ void SoftKeyBoard::ShowChinese(QString str,int page,int pos)
         return;
     for(int i = 0;i < 12;++i)
     {
-        m_btns_[46 + i]->setText(it->second.size() > page * 12 + i && it != m_map_.end() ? it->second[page * 12 + i] : "");
+        m_btns_[46 + i]->setText(it != m_map_.end() && it->second.size() > page * 12 + i ? it->second[page * 12 + i] : "");
         qDebug()<<__PRETTY_FUNCTION__<<m_btns_[46 + i]->text()<<i;
     }
     for(int i = 0;i < 12;++i)
