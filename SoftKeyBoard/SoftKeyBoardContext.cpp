@@ -1,11 +1,9 @@
 #include <QtCore>
 #include "SoftKeyBoardContext.h"
 
-SoftKeyBoardContext::SoftKeyBoardContext(QWidget * parent)
+SoftKeyBoardContext::SoftKeyBoardContext()
 {
-    keyboardSize_ = QSize(1188,420);
-    windowsSize_ = parent->size();
-    keyboard_ = new SoftKeyBoard(parent);
+    keyboard_ = new SoftKeyBoard();
     connect(keyboard_, SIGNAL(characterGenerated(int)), SLOT(sendCharacter(int)));
 }
 
@@ -64,6 +62,5 @@ void SoftKeyBoardContext::updatePosition()
     QWidget *widget = focusWidget();
     if (!widget)
         return;
-    QRect rect = widget->geometry();
-    keyboard_->move(rect.x(), rect.bottom());
+    keyboard_->move(widget->mapToGlobal(QPoint(widget->rect().left(), widget->rect().bottom())));
 }

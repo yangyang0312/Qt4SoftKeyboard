@@ -6,7 +6,7 @@
 #include "SoftKeyBoard.h"
 
 SoftKeyBoard::SoftKeyBoard(QWidget * parent)
-    : QWidget(parent, /*Qt::Tool|*/ Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint),m_lastFocusedWidget_(0)
+    : QWidget(parent, Qt::Tool| Qt::WindowStaysOnTopHint | Qt::FramelessWindowHint),m_lastFocusedWidget_(0)
 {
     ui.setupUi(this);
     hide();
@@ -234,10 +234,8 @@ void SoftKeyBoard::mouseReleaseEvent(QMouseEvent *event)
 
 void SoftKeyBoard::paintEvent(QPaintEvent *)
 {
-    QStyleOption opt;
-    opt.init(this);
     QPainter p(this);
-    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+    p.fillRect(rect(), QColor(153, 153, 153,127));
 }
 
 void SoftKeyBoard::on_btn_language__clicked()

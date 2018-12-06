@@ -8,12 +8,18 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    SoftKeyBoardContext * ic = new SoftKeyBoardContext(&w);
+    SoftKeyBoardContext * ic = new SoftKeyBoardContext();
     a.setInputContext(ic);        //就这两三句就好
     w.show();
     return a.exec();
 }
 ```
-效果： 
+
+如果是QDialog则需要在QDialog构造函数中加上：
+```cpp
+    ui->setupUi(this);
+    //QDialog使用软键盘的关键设置
+    setWindowModality(Qt::WindowModal);
+```
  
 中文处理的比较简单，只能输入单字，也没有联想功能啥的。。。嵌入式也可以使用

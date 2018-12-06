@@ -12,7 +12,7 @@ class SoftKeyBoardContext : public QInputContext
     Q_OBJECT
 
 public:
-    SoftKeyBoardContext(QWidget * parent);
+    SoftKeyBoardContext();
     ~SoftKeyBoardContext();
 
     bool filterEvent(const QEvent* event);
@@ -29,14 +29,6 @@ private:
 
 private:
     SoftKeyBoard *keyboard_;
-    /**
-     * @brief keyboardSize_ 键盘界面的大小
-     */
-    QSize keyboardSize_;
-    /**
-     * @brief windowsSize_ 整个窗口的大小 1920*1080
-     */
-    QSize windowsSize_;
 };
 
 #endif 

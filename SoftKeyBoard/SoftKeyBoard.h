@@ -15,7 +15,7 @@ class SoftKeyBoard : public QWidget
     Q_OBJECT
 
 public:
-    SoftKeyBoard(QWidget * parent);
+    SoftKeyBoard(QWidget * parent = 0);
 
 signals:
     void characterGenerated(int character);

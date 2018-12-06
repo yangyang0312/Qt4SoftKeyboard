@@ -27,16 +27,19 @@ SOURCES += \
         main.cpp \
         MainWindow.cpp \
     SoftKeyBoard.cpp \
-    SoftKeyBoardContext.cpp
+    SoftKeyBoardContext.cpp \
+    Dialog.cpp
 
 HEADERS += \
         MainWindow.h \
     SoftKeyBoard.h \
-    SoftKeyBoardContext.h
+    SoftKeyBoardContext.h \
+    Dialog.h
 
 FORMS += \
         MainWindow.ui \
-    SoftKeyBoard.ui
+    SoftKeyBoard.ui \
+    Dialog.ui
 
 RESOURCES += \
     qrc.qrc

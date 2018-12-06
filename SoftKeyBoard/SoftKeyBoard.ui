@@ -18,10 +18,6 @@
 {
 	font: 75 20pt;
 }
-#SoftKeyBoard
-{
-	background-color:rgba(153, 153, 153,127);
-}
 QPushButton 
 {
 	color: rgb(255,255,255);

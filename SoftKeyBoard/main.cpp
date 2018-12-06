@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
     QTextCodec::setCodecForTr( QTextCodec::codecForName("UTF-8"));
     MainWindow w;
-    SoftKeyBoardContext * ic = new SoftKeyBoardContext(&w);
+    SoftKeyBoardContext * ic = new SoftKeyBoardContext();
     a.setInputContext(ic);
     w.show();
 
