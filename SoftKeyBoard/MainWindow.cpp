@@ -15,16 +15,16 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-//QDialog示例
+//QDialog绀轰緥
 void MainWindow::on_btnOpen_clicked()
 {
     Dialog d(this);
     d.exec();
 }
-//QFileDialog示例
+//QFileDialog绀轰緥
 void MainWindow::on_btnFileDialog_clicked()
 {
-    //不能直接用QFileDialog::getOpenFileName()
+    //涓嶈兘鐩存帴浣跨敤QFileDialog::getOpenFileName()
     QFileDialog dlg(this);
     dlg.setWindowModality(Qt::WindowModal);
     if(dlg.exec() == QDialog::Accepted){
