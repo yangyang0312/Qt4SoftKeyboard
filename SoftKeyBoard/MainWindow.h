@@ -18,6 +18,7 @@ public:
 
 private slots:
     void on_btnOpen_clicked();
+    void on_btnFileDialog_clicked();
 
 private:
     Ui::MainWindow *ui;
