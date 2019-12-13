@@ -290,7 +290,7 @@ bool SoftKeyBoard::InitChinese()
             str = file.readLine();
             if(str.size() < 4)
                 break;
-            key = str.mid(2,str.size() - 4);
+            key = str.mid(2,str.size() - 3);
             m_map_[key].push_back(str.left(1));
             ++i;
         }
