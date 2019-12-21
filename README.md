@@ -23,3 +23,6 @@ int main(int argc, char *argv[])
 ```
  
 中文处理的比较简单，只能输入单字，也没有联想功能啥的。。。嵌入式也可以使用
+
+**注意：最近发现，新的代码在linux平台上存在异常，但是windows平台正常，使用第一版使用正常，但是不支持dialog的输入，怀疑是平台差异引起，目前暂未解决该问题，使用此代码是自己注意一下**
+**注意2：因为git上传的时候，默认把字库文件FontLibrary.txt的windows换行符，换成了linux换行符，所以在加载字库文件时，可能存在问题，如果输入结果不对，请修改 bool SoftKeyBoard::InitChinese() 函数 key = str.mid(2,str.size() - 3); ，使用此代码时注意一下。**
